@@ -1,0 +1,58 @@
+*** Data Dictionary from the 2021 CDC PLACES Project: Local Data for Better Health
+ and Census American Community Survey (5-year) ***
+ 
+*** Compiled by WM Harris (Oct 2023) for IGME-102 P2: Health Visualization
+
+SOURCES:
+* CDC PLACES Project: Local Data for Better Health https://www.cdc.gov/places 
+https://data.cdc.gov/api/views/cwsq-ngmh/rows.csv?date=20231016&accessType=DOWNLOAD
+
+* 2021 Census demographic data for NY & GA census tracts
+https://api.census.gov/data/2021/acs/acs5?get=B01001_001E,B01001_003E,B01001_004E,B01001_005E,B01001_006E,B01001_027E,B01001_028E,B01001_029E,B01001_030E,B03002_003E,B19013_001E,B19058_002E,B19083_001E,NAME&for=tract:*&in=state:13,36
+
+JSON OBJECT PROPERTIES *************************** 
+
+	*** Properties from the CENSUS Data Source
+	
+	["population"]	Total census tract population 
+	["white"]		White, non-Hispanic/Latino census population
+	["adults]		Adult population
+	["medianIncome"]	Median household income
+	["assisted"]	Receive cash or Food Stamps/SNAP public assistance
+	["gini"]   		GINI index of income inequality (bigger is worse, max 1)
+	["fullName"]	Tract (ID + county + state) name
+	["countyId"] 	County ID
+	["stateId"] 	State ID
+	["state"]		State name
+	["tract"]		Tract ID
+
+
+	
+	*** Properties from the CDC Data Source
+	
+	["popStudied"]	Total *estimated* CDC study population
+    ["lon"]			Locality longitude (more negative = more West)
+					Monroe Co, NY range: -77.96 to -77.41
+					Fulton Co, GA range: -84.54 to -84.19
+    ["lat"]			Locality latitude (more positive = more North)
+					Monroe Co, NY range: 43.33 to 42.96
+					Fulton Co, GA range: 34.08 to 33.60
+    ["outcomes"]	(object of poor Health Outcome measures)
+    				https://www.cdc.gov/places/measure-definitions/health-outcomes
+    	Measure identifier : percent in CDC study population
+    				 		
+	["preventions"]	(object of  Prevention measures) 
+    				https://www.cdc.gov/places/measure-definitions/prevention
+    	Measure identifier : percent in CDC study population
+    	
+	["risks"]		(object of Health Risk Behavior measures)
+    				https://www.cdc.gov/places/measure-definitions/unhealthy-behaviors
+    	Measure identifier : percent in CDC study population
+    	
+    ["statuses"]	(object of poor Health Status measures)
+    				https://www.cdc.gov/places/measure-definitions/health-status
+    	Measure identifier : percent in CDC study population
+    	
+	["disabilities"]	(object of Disability measures)
+    				https://www.cdc.gov/places/measure-definitions/disability
+    	Measure identifier : percent in CDC study population

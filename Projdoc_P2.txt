@@ -1,0 +1,19 @@
+Jayson Packer
+IGME 102, Section 1
+
+Assignment: P2 Census Visualization
+
+Description:
+Takes data for the 2021 Health Census in Monroe, NY and Fulton County, 
+Georgia and displays different aspects of it. Has user controls to 
+change the county displayed and filter which tracts are displayed
+
+User Responsibilities:
+The user must scroll to the bottom of the canvas to see the controls.
+Then use them to either change the county displayed 
+or filter the displayed tracts. 
+
+Issues/Caveats: 
+For the variables that are represented by color is it hard to tell what it varying ranges
+ and I'm not sure how to fix it
+
